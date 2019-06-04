@@ -31,16 +31,19 @@
 # this command is ugly done this way, so generating the output data into variables is recommended to make the script more readable.
 # e.g.
 #   interface_name=$(ip a |awk '/: e/{gsub(/:/,"");print $2}')
+
 myhostname=$(hostname)
-lan_ipaddress=$(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}')|awk '/inet /{gsub(/\/.*/,"");print $2}')
-lan_hostname=$(getent hosts $(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}'))|awk '/inet /{gsub(/\/.*/,"");print $2}' | awk '{print $2}')
+interface=$(ip a | awk '/: e/{gsub(/:/,"");print $2}')
+lan_ipaddress=$(ip a s $interface | awk '/inet /{gsub(/\/.*/,"");print $2}')
+lan_hostname=$(getent hosts $lan_ipaddress | awk '{print $2}')
+router_address=$(ip route | grep "default" | awk '{ print $3 }')
 external_ip=$(curl -s icanhazip.com)
 external_name=$(getent hosts $external_ip | awk '{print $2}')
-
 cat <<EOF
 Hostname        : $myhostname
 LAN Address     : $lan_ipaddress
 LAN Hostname    : $lan_hostname
 External IP     : $external_ip
 External Name   : $external_name
+Router Address  : $router_address
 EOF
