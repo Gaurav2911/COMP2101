@@ -4,9 +4,9 @@
 #
 # Sample output:
 #   Hostname        : hostname
-#   LAN Address     : 192.168.2.2
+#   LAN Address     : 192.168.3.5
 #   LAN Hostname    : host-name-from-hosts-file
-#   External IP     : 1.2.3.4
+#   External IP     : 1.1.1.1
 #   External Name   : some.name.from.our.isp
 
 # Task 1: Add a section to the script to define variables which hold the output data for
