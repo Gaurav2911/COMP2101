@@ -1,7 +1,6 @@
 #!/bin/bash
 #
 # This script produces the dynamic welcome message
-# it should look like
 #   Welcome to planet hostname, title name!
 
 # Improve this script by using the value in the automatic variable $USER for the name
@@ -12,8 +11,8 @@
 ###############
 # Variables   #
 ###############
-title="Overlord"
-myname="dennis"
+title="King OF Linux"
+myname="Dennis Simpson"
 hostname=$(hostname)
 
 ###############
