@@ -29,6 +29,6 @@ test -d ~/Pictures && cat <<EOF
 Found $(find ~/Pictures -type f|wc -l) files in the Pictures directory.
 The Pictures directory uses $(du -sh ~/Pictures|awk '{print $1}') space on the disk.
 EOF
-if [ -f /etc/passwd ]then
-echo "aviraj"
+if [ -f /etc/passwd ]
+echo "Gaurav"
 fi
