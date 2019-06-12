@@ -73,11 +73,11 @@ while [ $# -gt 0 ]; do
 done
 
 if [ ! $numberOfSleeps -gt 0 ]; then
-    error-exit "$numberOfSleeps is not a valid count of sleeps to wait for signals"
+    error-exit "$numberOfSleeps is not a valid count of sleeps to wait for sign"
 fi
 
 if [ ! $sleepTime -gt 0 ]; then
-    error-exit "$sleepTime is not a valid time to sleep while waiting for signals"
+    error-exit "$sleepTime is not a valid time to sleep while waiting for sign"
 fi
 
 sleepCount=$numberOfSleeps
@@ -90,4 +90,4 @@ while [ $sleepCount -gt 0 ]; do
     sleep $sleepTime
     sleepCount=$((sleepCount - 1))
 done
-echo "Wait counter expired, exiting peacefully"
+echo "Waiting time finished, exiting peacefully"

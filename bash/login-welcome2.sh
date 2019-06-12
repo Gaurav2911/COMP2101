@@ -1,6 +1,6 @@
 #!/bin/bash
 
-titles=("Professor" "Operator" "Programmer" "Boss" "Grunt" "Final Boss" "Network Admin" )
+titles=("boy" "kindergarden" "school" "college" "job" "life" "Network Admin" )
 num=$(( ${#titles[@]} ))
 ran=$(( RANDOM % num ))
 ###############
@@ -13,7 +13,7 @@ weekday=$(date +%u)
 # Main        #
 ###############
 #cat <<EOF
-cowsay "Welcome to planet $hostname, "${titles[$ran]} $USER!""
+cowsay "Welcome to Georgian college $hostname, "${titles[$ran]} $USER!""
 if [ "$weekday" = "6" ] || [ "$weekday" = "7" ]
 then
    echo "It is $date on Weekend."
