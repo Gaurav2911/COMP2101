@@ -90,4 +90,4 @@ while [ $sleepCount -gt 0 ]; do
     sleep $sleepTime
     sleepCount=$((sleepCount - 1))
 done
-echo "Waiting time finished, exiting peacefully"
+echo "Waiting time finished, Exit Now"
