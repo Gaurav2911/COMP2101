@@ -86,7 +86,7 @@ function reset {
   sleepCount=$(($numberOfSleeps+1))
 }
 while [ $sleepCount -gt 0 ]; do
-    echo "Waiting $sleepCount more times for signals"
+    echo "Waiting $sleepCount more times for sign"
     sleep $sleepTime
     sleepCount=$((sleepCount - 1))
 done
