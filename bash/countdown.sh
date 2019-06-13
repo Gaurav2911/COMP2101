@@ -82,11 +82,11 @@ fi
 
 sleepCount=$numberOfSleeps
 function reset {
-  echo "you are not allowed to interrupt the count ."
+  echo "can not interrupt the count ."
   sleepCount=$(($numberOfSleeps+1))
 }
 while [ $sleepCount -gt 0 ]; do
-    echo "Waiting $sleepCount more times for sign"
+    echo "Waiting $sleepCount more times...."
     sleep $sleepTime
     sleepCount=$((sleepCount - 1))
 done
